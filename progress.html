@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="/Images/ring.png" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="Styles/general.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kanit&family=Montserrat:ital,wght@0,400;0,500;0,700;0,800;0,900;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <title>GlamourGem Haven-Progress</title>
+    </head>
+    <body>
+        <div
+            class="px-2 lg:px-10 absolute top-10 bottom-10 left-10 right-10 bg-gray-200 rounded-md shadow-lg flex flex-col items-center pt-10 gap-5"
+        >
+            <div class="w-full flex items-center justify-center gap-1">
+                <a
+                    class="text-blue-400 cursor-pointer hover:underline text-xs lg:text-sm"
+                    href="index.html"
+                    >HOME</a
+                >
+                <p class="text-xs lg:text-sm">/</p>
+                <a
+                    class="text-blue-400 cursor-pointer hover:underline text-xs lg:text-sm"
+                    href="shop-page.html"
+                    >SHOP</a
+                >
+                <p class="text-xs lg:text-sm">/</p>
+                <a
+                    class="text-blue-400 cursor-pointer hover:underline text-xs lg:text-sm"
+                    href="wishlist.html"
+                    >WISHLIST</a
+                >
+                <p class="text-xs lg:text-sm">/</p>
+                <a
+                    class="text-blue-400 cursor-pointer hover:underline text-xs lg:text-sm"
+                    href="cart.html"
+                    >CART</a
+                >
+                <p class="text-xs lg:text-sm">/</p>
+                <a
+                    class="text-blue-400 cursor-pointer hover:underline text-xs lg:text-sm"
+                    href="order.html"
+                    >ORDER</a
+                >
+                <p class="text-xs lg:text-sm">/</p>
+                <p class="text-xs lg:text-sm">PROGRESS</p>
+            </div>
+            <div
+                class="lg:px-10 w-full mb-20 flex items-center justify-between"
+            >
+                <p class="font-bold text-xs">
+                    ORDER: <span class="order-id text-blue-600"></span>
+                </p>
+                <p class="font-bold text-xs">
+                    EXPECTED ARRIVAL:
+                    <span class="expected-arrival text-blue-600"></span>
+                </p>
+            </div>
+            <div
+                class="relative flex flex-col w-full items-center justify-center"
+            >
+                <div
+                    class="progress-bar bg-gradient-to-r from-yellow-600 to-gray-400 h-1 lg:h-2 z-20 rounded-full absolute left-0"
+                    style="width: 0%"
+                ></div>
+                <div
+                    class="w-full bg-gray-600 h-1 lg:h-2 rounded-full flex items-center justify-between"
+                >
+                    <div
+                        class="zero-percent z-20 bg-gray-600 w-5 h-5 lg:w-8 lg:h-8 rounded-full flex items-center justify-center"
+                    >
+                        <img
+                            class="zero-check hidden w-3 h-3 lg:w-5 lg:h-5"
+                            src="Images/progress-check.png"
+                            alt=""
+                        />
+                    </div>
+                    <div
+                        class="three-5 z-20 bg-gray-600 w-5 h-5 lg:w-8 lg:h-8 rounded-full flex items-center justify-center"
+                    >
+                        <img
+                            class="three-check hidden w-3 h-3 lg:w-5 lg:h-5"
+                            src="Images/progress-check.png"
+                            alt=""
+                        />
+                    </div>
+                    <div
+                        class="six-5 z-20 bg-gray-600 w-5 h-5 lg:w-8 lg:h-8 rounded-full flex items-center justify-center"
+                    >
+                        <img
+                            class="six-check hidden w-3 h-3 lg:w-5 lg:h-5"
+                            src="Images/progress-check.png"
+                            alt=""
+                        />
+                    </div>
+                    <div
+                        class="hundred z-20 bg-gray-600 w-5 h-5 lg:w-7 lg:h-7 rounded-full flex items-center justify-center"
+                    >
+                        <img
+                            class="hundred-check hidden w-3 h-3 lg:w-5 lg:h-5"
+                            src="Images/progress-check.png"
+                            alt=""
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="w-full flex items-center justify-between lg:mt-10">
+                <div class="flex gap-2 items-center">
+                    <img
+                        class="w-7 h-7"
+                        src="Images/order-processed.png"
+                        alt=""
+                    />
+                    <div class="h-full w-1/2 flex flex-col">
+                        <p class="font-bold" style="font-size: 0.5rem">Order</p>
+                        <p class="font-bold" style="font-size: 0.5rem">
+                            Processed
+                        </p>
+                    </div>
+                </div>
+                <div class="flex gap-2 items-center">
+                    <img class="w-7 h-7" src="Images/delivered.png" alt="" />
+                    <div class="h-full w-1/2 flex flex-col">
+                        <p class="font-bold" style="font-size: 0.5rem">Order</p>
+                        <p class="font-bold" style="font-size: 0.5rem">
+                            Processed
+                        </p>
+                    </div>
+                </div>
+                <div class="flex gap-2 items-center">
+                    <img class="w-7 h-7" src="Images/shipped.png" alt="" />
+                    <div class="h-full w-1/2 flex flex-col">
+                        <p class="font-bold" style="font-size: 0.5rem">Order</p>
+                        <p class="font-bold" style="font-size: 0.5rem">
+                            Processed
+                        </p>
+                    </div>
+                </div>
+                <div class="flex gap-2 items-center">
+                    <img
+                        class="w-7 h-7"
+                        src="Images/home-icon-silhouette.png"
+                        alt=""
+                    />
+                    <div class="h-full w-1/2 flex flex-col">
+                        <p class="font-bold" style="font-size: 0.5rem">Order</p>
+                        <p class="font-bold" style="font-size: 0.5rem">
+                            Processed
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full h-full mb-10 mt-10 flex flex-col items-center justify-center">
+                <div class="w-full flex items-center justify-center">
+                    <p class="font-bold">ITEM(S)</p>
+                </div>
+                <div class="progress-item-container w-full flex h-full items-center gap-20 overflow-x-scroll">
+                </div>
+            </div>
+        </div>
+        <script src="Scripts/progress-script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+.cart-text-header {
+    font-size: 0.4rem;
+}
+.item-type {
+    font-size: 0.6rem;
+}
+.item-material {
+    font-size: 0.6rem;
+}
+.item-gender {
+    font-size: 0.6rem;
+}
+.item-price {
+    font-size: 0.6rem;
+}
+.total-item-cost {
+    font-size: 0.6rem;
+}
+.shipping-cost {
+    font-size: 0.6rem;
+}
+.discount-label {
+    font-size: 0.6rem;
+}
+@media(max-width:768px) {
+    .discount-text {
+        font-size: 0.5rem;
+    }
+}

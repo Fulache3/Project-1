@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="Styles/general.css" />
+        <link rel="stylesheet" href="Styles/shop-page.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kanit&family=Montserrat:ital,wght@0,400;0,500;0,700;0,800;0,900;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" type="image/x-icon" href="/Images/ring.png" />
+        <title>GlamourGem Haven-Shop</title>
+    </head>
+    <body class="p-0 m-0">
+        <!--ADDED TO CART MESSAGE-->
+        <section
+            class="shop-cart-message fixed top-0 right-0 left-0 bottom-0 z-30 bg-opacity-50 hidden items-center justify-center"
+        >
+            <div
+                class="flex p-10 rounded-md flex-col gap-10 items-center justify-center"
+            >
+                <img
+                    class="cart-animation w-32 h-32 lg:w-80 lg:h-80 opacity-60"
+                    src="Images/cart-animate.png"
+                    alt=""
+                />
+            </div>
+        </section>
+        <!--ADDED TO WISHLIST MESSAGE-->
+        <section
+            class="hidden shop-wishlist-message fixed top-0 right-0 left-0 bottom-0 z-30 bg-opacity-50 items-center justify-center"
+        >
+            <div
+                class="flex p-10 rounded-md flex-col gap-10 items-center justify-center"
+            >
+                <img
+                    class="wishlist-animation w-56 h-56 lg:w-96 lg:h-96"
+                    src="Images/heart-pulse.png"
+                    alt=""
+                />
+            </div>
+        </section>
+        <section
+            class="loading-section hidden fixed top-0 left-0 right-0 bottom-0 bg-black opacity-50 z-30 items-center justify-center"
+        >
+            <img class="animate-spin" src="Images/loading.png" alt="Loading" />
+        </section>
+        <!--Menu for small screens-->
+        <section
+            class="menu-sm-screen fixed top-0 bottom-0 right-0 left-0 bg-black bg-opacity-90 z-40 hidden items-center justify-center"
+        >
+            <div
+                class="relative text-white h-auto w-60 p-5 bg-gray-400 shadow bg-opacity-25 flex flex-col items-center rounded-md"
+            >
+                <p class="font-bold">MENU</p>
+                <div class="mt-5 flex flex-col items-center gap-3">
+                    <p class="sm-menu-login cursor-pointer hover:underline">
+                        LOGIN
+                    </p>
+                    <a
+                        href="index.html"
+                        class="sm-menu-shop cursor-pointer hover:underline"
+                    >
+                        HOME
+                    </a>
+                    <a
+                        href="order.html"
+                        class="sm-menu-collections cursor-pointer hover:underline"
+                    > 
+                        ORDER
+                    </a>
+                    <a href="order.html" class="sm-menu-about cursor-pointer hover:underline">
+                        ABOUT
+                    </a>
+                    <a
+                        href="contacts.html"
+                        class="sm-menu-contacts cursor-pointer hover:underline"
+                    >
+                        CONTACTS
+                    </a>
+                </div>
+                <button
+                    class="close-menu-btn bg-white p-2 rounded-full absolute -top-6 -right-6"
+                >
+                    <img class="w-3" src="Images/close.png" alt="close" />
+                </button>
+            </div>
+        </section>
+        <!--Login Section-->
+        <section
+            class="login-section fixed hidden bg-black bg-opacity-90 top-0 bottom-0 right-0 left-0 z-40 items-center justify-center"
+        >
+            <!--LOGIN PAGE-->
+            <div
+                class="login-page relative text-white h-auto w- p-5 bg-white bg-opacity-90 shadow flex flex-col gap-5 rounded-md lg:w-96 lg:py-14 lg:gap-10"
+            >
+                <div class="w-full flex items-center justify-center">
+                    <h1
+                        class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-yellow-600"
+                    >
+                        SIGN IN
+                    </h1>
+                </div>
+                <div
+                    class="flex w-full h-auto items-center justify-center gap-5"
+                >
+                    <input
+                        class="email-login w-full shadow-sm p-2 rounded-md hover:shadow-xl focus:shadow-xl text-sm focus:outline-none text-black"
+                        type="email"
+                        placeholder="Email"
+                    />
+                    <img
+                        class="w-4 opacity-0"
+                        src="Images/visible.png"
+                        alt="Show password"
+                    />
+                </div>
+                <div
+                    class="flex w-full h-auto items-center justify-center gap-5"
+                >
+                    <input
+                        class="password-login w-full shadow-sm rounded-md hover:shadow-xl focus:shadow-xl p-2 text-sm focus:outline-none text-black"
+                        type="password"
+                        placeholder="Password"
+                    />
+                    <img
+                        class="pass-visibility w-4 cursor-pointer active:opacity-50"
+                        src="Images/visible.png"
+                        alt="Show password"
+                    />
+                </div>
+                <button
+                    class="bg-gradient-to-r from-gray-400 to-yellow-600 rounded-md px-2 py-1 hover:shadow-lg active:opacity-50 transition-all 1s ease-in"
+                >
+                    Login
+                </button>
+                <p class="text-black text-xs">
+                    No account yet?
+                    <span
+                        class="signup-link text-yellow-600 hover:underline cursor-pointer"
+                        >Sign up here!</span
+                    >
+                </p>
+                <button
+                    class="close-login-sec-btn bg-white hover:opacity-70 p-2 rounded-full absolute -top-5 -right-5"
+                >
+                    <img class="w-2" src="Images/close.png" alt="close" />
+                </button>
+            </div>
+            <!--SIGN UP PAGE-->
+            <div
+                class="signup-page hidden relative text-white h-auto w- p-5 bg-white bg-opacity-90 shadow flex-col gap-5 rounded-md lg:w-96 lg:py-14 lg:gap-10"
+            >
+                <div class="w-full flex items-center justify-center">
+                    <h1
+                        class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-yellow-600"
+                    >
+                        SIGN UP
+                    </h1>
+                </div>
+                <div
+                    class="flex w-full h-auto items-center justify-center gap-5"
+                >
+                    <input
+                        class="email-signup w-full shadow-sm rounded-md hover:shadow-xl focus:shadow-xl p-2 text-sm focus:outline-none text-black"
+                        type="email"
+                        placeholder="Email"
+                    />
+                    <img
+                        class="w-4 opacity-0"
+                        src="Images/visible.png"
+                        alt="Show password"
+                    />
+                </div>
+                <div
+                    class="flex w-full h-auto items-center justify-center gap-5"
+                >
+                    <input
+                        class="password-signup w-full shadow-sm rounded-md hover:shadow-xl focus:shadow-xl p-2 text-sm focus:outline-none text-black"
+                        type="password"
+                        placeholder="Password"
+                    />
+                    <img
+                        class="pass-signup-visibility w-4 cursor-pointer active:opacity-50"
+                        src="Images/visible.png"
+                        alt="Show password"
+                    />
+                </div>
+                <div
+                    class="flex w-full h-auto items-center justify-center gap-5"
+                >
+                    <input
+                        class="re-enter-password-signup w-full shadow-sm rounded-md hover:shadow-xl focus:shadow-xl p-2 text-sm focus:outline-none text-black"
+                        type="password"
+                        placeholder="Re-enter password"
+                    />
+                    <img
+                        class="re-enter-pass-signup-visibility w-4 cursor-pointer active:opacity-50"
+                        src="Images/visible.png"
+                        alt="Show password"
+                    />
+                </div>
+                <button
+                    class="bg-gradient-to-r from-gray-400 to-yellow-600 rounded-md px-2 py-1 hover:shadow-lg active:opacity-50 transition-all 1s ease-in"
+                >
+                    Create Account
+                </button>
+                <p class="text-black text-xs">
+                    Already have an account?
+                    <span
+                        class="login-link text-yellow-600 hover:underline cursor-pointer"
+                        >Login here!</span
+                    >
+                </p>
+                <button
+                    class="close-signup-sec-btn bg-white hover:opacity-70 p-2 rounded-full absolute -top-5 -right-5"
+                >
+                    <img class="w-2" src="Images/close.png" alt="close" />
+                </button>
+            </div>
+        </section>
+        <!--Header-->
+        <header
+            class="z-20 fixed top-0 left-0 right-0 upper-header w-full h-28 bg-blue-50 pt-2 flex flex-col justify-end shadow-lg"
+        >
+            <div class="w-full flex justify-center mb-5 lg:hidden">
+                <h1
+                    class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-yellow-600"
+                >
+                    GlamourGem Haven
+                </h1>
+            </div>
+            <div
+                class="content-header w-full h-7 items-center flex justify-between px-20 lg-2 mb-3"
+            >
+                <!--Header Title-->
+                <h1
+                    class="hidden lg:inline-block text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-yellow-600"
+                >
+                    GlamourGem Haven
+                </h1>
+                <!--Menu for large screen-->
+                <!--Header clickable texts components-->
+                <div
+                    class="clickable-text hidden lg:flex justify-between items-center w-1/2"
+                >
+                    <a
+                        href="index.html"
+                        class="header-components hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-gray-400 hover:to-yellow-600 transition-all delay-75"
+                    >
+                        Home
+                    </a>
+                    <a
+                        href="order.html"
+                        class="header-components hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-gray-400 hover:to-yellow-600 transition-all delay-75"
+                    >
+                        Order
+                    </a>
+                    <p
+                        class="header-components hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-gray-400 hover:to-yellow-600 transition-all delay-75"
+                    >
+                        About
+                    </p>
+                    <a href="contacts.html"
+                        class="header-components hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-gray-400 hover:to-yellow-600 transition-all delay-75"
+                    >
+                        Contacts
+                    </a>
+                </div>
+                <!--Header clickable icons components-->
+                <div
+                    class="clickable-icons flex justify-between items-center w-full lg:w-48"
+                >
+                    <img
+                        class="menu-btn w-4 header-components hover:opacity-50 lg:hidden"
+                        src="Images/menu.png"
+                        alt=""
+                    />
+                    <img
+                        class="w-4 lg:w-5 header-components hover:opacity-50 hidden lg:inline-block"
+                        src="Images/philippines.png"
+                        alt=""
+                    />
+                    <img
+                        class="login-btn w-4 lg:w-5 header-components hover:opacity-50 hidden lg:inline-block"
+                        src="Images/user.png"
+                        alt=""
+                    />
+                    <img
+                        class="search-btn w-4 lg:w-5 header-components hover:opacity-50"
+                        src=" Images/search.png"
+                        alt=""
+                    />
+                    <a href="wishlist.html">
+                        <div
+                            class="flex relative hover:opacity-50 cursor-pointer"
+                        >
+                            <img
+                                class="wishlist-btn w-4 lg:w-5 header-components hover:opacity-50"
+                                src="Images/heart.png"
+                                alt=""
+                            />
+                            <div
+                                class="bg-gray-500 w-6 h-6 absolute -top-4 -right-4 flex items-center justify-center rounded-full"
+                            >
+                                <p
+                                    class="wishlist-quantity font-bold text-yellow-400 text-md"
+                                >
+                                    0
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="cart.html">
+                        <div
+                            class="flex relative hover:opacity-50 cursor-pointer"
+                        >
+                            <img
+                                class="cart-btn w-4 lg:w-5 header-components hover:opacity-50"
+                                src="Images/shopping-cart.png"
+                                alt=""
+                            />
+                            <div
+                                class="bg-gray-500 w-6 h-6 absolute -top-4 -right-4 flex items-center justify-center rounded-full"
+                            >
+                                <p
+                                    class="cart-quantity-shop font-bold text-yellow-400 text-md"
+                                >
+                                    0
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div
+                    class="search-bar hidden gap-2 items-center w-full lg:w-1/2"
+                >
+                    <input
+                        class="rounded-md p-1 w-full shadow-md"
+                        type="search"
+                        placeholder="Search"
+                    />
+                    <img
+                        class="search-bar-close w-3 cursor-pointer"
+                        src="Images/close.png"
+                        alt="close"
+                    />
+                </div>
+            </div>
+            <!--Lower texts deals-->
+            <div
+                class="transition-all lower-header w-full h-10 bg-gray-500 flex items-center justify-between px-2 lg:px-64 shadow-lg"
+            >
+                <div class="flex items-center">
+                    <img
+                        class="w-3 mr-1"
+                        src="Images/checked.png"
+                        alt="checked"
+                    />
+                    <p class="lower-header-text text-white">Up to 40% off</p>
+                </div>
+                <div class="flex items-center">
+                    <img
+                        class="w-3 mr-1"
+                        src="Images/checked.png"
+                        alt="checked"
+                    />
+                    <p class="lower-header-text text-white">Free Return</p>
+                </div>
+                <div class="flex items-center">
+                    <img
+                        class="w-3 mr-1"
+                        src="Images/checked.png"
+                        alt="checked"
+                    />
+                    <p class="lower-header-text text-white">1 month warranty</p>
+                </div>
+            </div>
+        </header>
+        <!--Main Content-->
+        <main class="shop-main-container flex gap-5">
+            <button
+                class="highlight-remove sm-category-btn animate-bounce z-20 fixed lg:hidden top-32 left-0 w-6 flex justify-end bg-gradient-to-r from-gray-400 to-yellow-600 text-white rounded-r-md"
+            >
+                <img src="Images/right-arrow.png" alt="" />
+            </button>
+            <!--SMALL SCREEN CATEGORY-->
+            <div
+                class="sm-category-nav hidden lg:hidden bg-black bg-opacity-90 fixed top-0 right-0 left-0 bottom-0 z-30"
+            >
+                <section
+                    class="bg-white gap-5 shadow-sm rounded-r-lg border-gray-300 flex flex-col items-center fixed top-5 left-0 bottom-5 p-14 overflow-scroll"
+                >
+                    <h1 class="font-bold">CATEGORIES</h1>
+                    <hr class="w-full" />
+                    <div
+                        class="highlight-remove sm-back-btn w-fit flex cursor-pointer"
+                    >
+                        <img src="Images/left-arrow.png" alt="left-arrow" />
+                        <h1 class="highlight-remove">Back</h1>
+                    </div>
+                    <div class="flex flex-col w-full gap-5">
+                        <div class="flex items-center justify-center">
+                            <h2 class="font-bold">Collections</h2>
+                        </div>
+                        <div class="flex w-full items-center gap-5 ml-7">
+                            <input
+                                class="sm-men-collections-cb cursor-pointer"
+                                type="checkbox"
+                                value="Male"
+                            />
+                            <p class="text-sm">Men Collections</p>
+                        </div>
+                        <div class="flex w-full items-center gap-5 ml-7">
+                            <input
+                                class="sm-women-collections-cb cursor-pointer"
+                                type="checkbox"
+                                value="Female"
+                            />
+                            <p class="text-sm">Women Collections</p>
+                        </div>
+                    </div>
+                    <hr class="w-full" />
+                    <div class="w-full flex flex-col gap-5">
+                        <div class="flex items-center justify-center">
+                            <h1 class="font-bold">All</h1>
+                        </div>
+                        <div class="flex flex-col gap-5">
+                            <div class="flex w-full items-center gap-5 ml-7">
+                                <input
+                                    class="sm-all-jewel cursor-pointer"
+                                    type="checkbox"
+                                    value="All Jewelries"
+                                />
+                                <p class="text-sm">All Jewelries</p>
+                            </div>
+                            <div class="flex w-full items-center gap-5 ml-7">
+                                <input
+                                    class="sm-necklace cursor-pointer"
+                                    type="checkbox"
+                                    value="Necklace"
+                                />
+                                <p class="text-sm">Necklaces</p>
+                            </div>
+                            <div class="flex w-full items-center gap-5 ml-7">
+                                <input
+                                    class="sm-earring cursor-pointer"
+                                    type="checkbox"
+                                    value="Earrings"
+                                />
+                                <p class="text-sm">Earrings</p>
+                            </div>
+                            <div class="flex w-full items-center gap-5 ml-7">
+                                <input
+                                    class="sm-bracelet cursor-pointer"
+                                    type="checkbox"
+                                    value="Bracelet"
+                                />
+                                <p class="text-sm">Bracelets</p>
+                            </div>
+                            <div class="flex w-full items-center gap-5 ml-7">
+                                <input
+                                    class="sm-ring-c cursor-pointer"
+                                    type="checkbox"
+                                    value="Ring"
+                                />
+                                <p class="text-sm">Rings</p>
+                            </div>
+                            <div class="flex w-full items-center gap-5 ml-7">
+                                <input
+                                    class="sm-earcuff cursor-pointer"
+                                    type="checkbox"
+                                    value="Ear Cuff"
+                                />
+                                <p class="text-sm">Ear Cuffs</p>
+                            </div>
+                            <div class="flex w-full items-center gap-5 ml-7">
+                                <input
+                                    class="sm-anklet cursor-pointer"
+                                    type="checkbox"
+                                    value="Anklet"
+                                />
+                                <p class="text-sm">Anklets</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="w-full" />
+                    <div class="flex flex-col w-full gap-5">
+                        <div class="flex items-center justify-center">
+                            <h2 class="font-bold">Shop by Material</h2>
+                        </div>
+                        <div class="flex w-full items-center gap-5 ml-7">
+                            <input
+                                class="sm-24kgold"
+                                type="checkbox"
+                                value="24k Gold"
+                            />
+                            <p class="text-sm">24k Gold</p>
+                        </div>
+                        <div class="flex w-full items-center gap-5 ml-7">
+                            <input
+                                class="sm-18kgold cursor-pointer"
+                                type="checkbox"
+                                value="18k Gold"
+                            />
+                            <p class="text-sm">18k Gold</p>
+                        </div>
+                        <div class="flex w-full items-center gap-5 ml-7">
+                            <input
+                                class="sm-silver cursor-pointer"
+                                type="checkbox"
+                                value="Silver"
+                            />
+                            <p class="text-sm">Silver</p>
+                        </div>
+                        <div class="flex w-full items-center gap-5 ml-7">
+                            <input
+                                class="sm-pearl cursor-pointer"
+                                type="checkbox"
+                                value="Pearl"
+                            />
+                            <p class="text-sm">Pearl</p>
+                        </div>
+                        <div class="flex w-full items-center gap-5 ml-7">
+                            <input
+                                class="sm-onyxstone cursor-pointer"
+                                type="checkbox"
+                                value="Onyx Stone"
+                            />
+                            <p class="text-sm">Onyx Stone</p>
+                        </div>
+                    </div>
+                    <button
+                        class="highlight-remove sm-category-find-btn text-white bg-gradient-to-r from-gray-400 to-yellow-600 w-fit px-6 py-2 rounded-md active:shadow-lg active:opacity-80 hover:shadow-lg"
+                    >
+                        Find
+                    </button>
+                </section>
+            </div>
+            <!--LARGE SCREEN SIDE CATEGORY-->
+            <section
+                class="lg-category-section bg-white gap-5 shadow-sm border-gray-300 ml-3 w-80 hidden lg:flex flex-col items-center mt-32 pl-5 pr-10 pb-20"
+            >
+                <h1 class="font-bold">CATEGORIES</h1>
+                <hr class="w-full" />
+                <div class="flex flex-col w-full gap-5">
+                    <div class="flex items-center justify-center">
+                        <h2 class="font-bold">Collections</h2>
+                    </div>
+                    <div class="flex w-full items-center gap-5 ml-7">
+                        <input
+                            class="lg-men-collections-cb cursor-pointer"
+                            type="checkbox"
+                            value="Male"
+                        />
+                        <p class="text-sm">Men Collections</p>
+                    </div>
+                    <div class="flex w-full items-center gap-5 ml-7">
+                        <input
+                            class="lg-women-collections-cb cursor-pointer"
+                            type="checkbox"
+                            value="Female"
+                        />
+                        <p class="text-sm">Women Collections</p>
+                    </div>
+                </div>
+                <hr class="w-full" />
+                <div class="w-full flex flex-col gap-5">
+                    <div class="flex items-center justify-center">
+                        <h1 class="font-bold">All</h1>
+                    </div>
+                    <div class="flex flex-col gap-5">
+                        <div class="flex w-full items-center gap-5 ml-7">
+                            <input
+                                class="lg-all-jewel cursor-pointer"
+                                type="checkbox"
+                                value="All Jewelries"
+                            />
+                            <p class="text-sm">All Jewelries</p>
+                        </div>
+                        <div class="flex w-full items-center gap-5 ml-7">
+                            <input
+                                class="lg-necklace cursor-pointer"
+                                type="checkbox"
+                                value="Necklace"
+                            />
+                            <p class="text-sm">Necklaces</p>
+                        </div>
+                        <div class="flex w-full items-center gap-5 ml-7">
+                            <input
+                                class="lg-earring cursor-pointer"
+                                type="checkbox"
+                                value="Earrings"
+                            />
+                            <p class="text-sm">Earrings</p>
+                        </div>
+                        <div class="flex w-full items-center gap-5 ml-7">
+                            <input
+                                class="lg-bracelet cursor-pointer"
+                                type="checkbox"
+                                value="Bracelet"
+                            />
+                            <p class="text-sm">Bracelets</p>
+                        </div>
+                        <div class="flex w-full items-center gap-5 ml-7">
+                            <input
+                                class="lg-ring-c cursor-pointer"
+                                type="checkbox"
+                                value="Ring"
+                            />
+                            <p class="text-sm">Rings</p>
+                        </div>
+                        <div class="flex w-full items-center gap-5 ml-7">
+                            <input
+                                class="lg-earcuff cursor-pointer"
+                                type="checkbox"
+                                value="Ear Cuff"
+                            />
+                            <p class="text-sm">Ear Cuffs</p>
+                        </div>
+                        <div class="flex w-full items-center gap-5 ml-7">
+                            <input
+                                class="lg-anklet cursor-pointer"
+                                type="checkbox"
+                                value="Anklet"
+                            />
+                            <p class="text-sm">Anklets</p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="w-full" />
+                <div class="flex flex-col w-full gap-5">
+                    <div class="flex items-center justify-center">
+                        <h2 class="font-bold">Shop by Material</h2>
+                    </div>
+                    <div class="flex w-full items-center gap-5 ml-7">
+                        <input
+                            class="lg-24kgold cursor-pointer"
+                            type="checkbox"
+                            value="24k Gold"
+                        />
+                        <p class="text-sm">24k Gold</p>
+                    </div>
+                    <div class="flex w-full items-center gap-5 ml-7">
+                        <input
+                            class="lg-18kgold cursor-pointer"
+                            type="checkbox"
+                            value="18k Gold"
+                        />
+                        <p class="text-sm">18k Gold</p>
+                    </div>
+                    <div class="flex w-full items-center gap-5 ml-7">
+                        <input
+                            class="lg-silver cursor-pointer"
+                            type="checkbox"
+                            value="Silver"
+                        />
+                        <p class="text-sm">Silver</p>
+                    </div>
+                    <div class="flex w-full items-center gap-5 ml-7">
+                        <input class="lg-pearl" type="checkbox" value="Pearl" />
+                        <p class="text-sm">Pearl</p>
+                    </div>
+                    <div class="flex w-full items-center gap-5 ml-7">
+                        <input
+                            class="lg-onyxstone cursor-pointer"
+                            type="checkbox"
+                            value="Onyx Stone"
+                        />
+                        <p class="text-sm">Onyx Stone</p>
+                    </div>
+                </div>
+                <button
+                    class="highlight-remove lg-category-find-btn text-white bg-gradient-to-r from-gray-400 to-yellow-600 w-fit px-6 py-2 rounded-md active:shadow-lg active:opacity-80 hover:shadow-lg"
+                >
+                    Find
+                </button>
+            </section>
+            <!--Products section or main content-->
+            <section
+                class="product-display z-10 w-full mt-32 h-auto shadow-md p-2 gap-y-5"
+            ></section>
+        </main>
+        <script src="Scripts/header-script.js"></script>
+        <script src="Scripts/small-menu-script.js"></script>
+        <script src="Scripts/login-script.js"></script>
+        <script src="Scripts/vanilla-tilt.js"></script>
+        <script src="Scripts/shop-page-script.js" type="module"></script>
+    </body>
+</html>

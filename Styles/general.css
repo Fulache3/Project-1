@@ -1,0 +1,15 @@
+*:focus {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+body {
+    font-family: Montserrat,Arial, Helvetica, sans-serif;
+}
+.lower-header-text {
+    font-size: 10px;
+}
+.header-components {
+    cursor: pointer;
+}

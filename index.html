@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="Styles/general.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kanit&family=Montserrat:ital,wght@0,400;0,500;0,700;0,800;0,900;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" type="image/x-icon" href="/Images/ring.png" />
+        <title>GlamourGem Haven-Home</title>
+    </head>
+    <body class="home-page-body p-0 m-0">
+        <!--Menu for small screens-->
+        <section
+            class="menu-sm-screen fixed top-0 bottom-0 right-0 left-0 bg-black bg-opacity-90 z-40 hidden items-center justify-center"
+        >
+            <div
+                class="relative text-white h-auto w-60 p-5 bg-gray-400 shadow bg-opacity-25 flex flex-col items-center rounded-md"
+            >
+                <p class="font-bold">MENU</p>
+                <div class="mt-5 flex flex-col items-center gap-3">
+                    <a
+                        class="highlight-remove sm-menu-login cursor-pointer hover:underline"
+                    >
+                        LOGIN
+                    </a>
+                    <a
+                        href="shop-page.html"
+                        class="highlight-remove sm-menu-shop cursor-pointer hover:underline"
+                    >
+                        SHOP
+                    </a>
+                    <a
+                        href="order.html"
+                        class="highlight-remove sm-menu-collections cursor-pointer hover:underline"
+                    >
+                        ORDER
+                    </a>
+                    <a
+                        href="about.html"
+                        class="highlight-remove sm-menu-about cursor-pointer hover:underline"
+                    >
+                        ABOUT
+                    </a>
+                    <a
+                        href="contacts.html"
+                        class="highlight-remove sm-menu-contacts cursor-pointer hover:underline"
+                    >
+                        CONTACTS
+                    </a>
+                </div>
+                <button
+                    class="close-menu-btn bg-white p-2 rounded-full absolute -top-6 -right-6"
+                >
+                    <img class="w-3" src="Images/close.png" alt="close" />
+                </button>
+            </div>
+        </section>
+        <!--Login Section-->
+        <section
+            class="login-section fixed hidden bg-black bg-opacity-90 top-0 bottom-0 right-0 left-0 z-40 items-center justify-center"
+        >
+            <!--LOGIN PAGE-->
+            <div
+                class="login-page relative text-white h-auto w- p-5 bg-white bg-opacity-90 shadow flex flex-col gap-5 rounded-md lg:w-96 lg:py-14 lg:gap-10"
+            >
+                <div class="w-full flex items-center justify-center">
+                    <h1
+                        class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-yellow-600"
+                    >
+                        SIGN IN
+                    </h1>
+                </div>
+                <div
+                    class="flex w-full h-auto items-center justify-center gap-5"
+                >
+                    <input
+                        class="email-login w-full shadow-sm p-2 rounded-md hover:shadow-xl focus:shadow-xl text-sm focus:outline-none text-black"
+                        type="email"
+                        placeholder="Email"
+                    />
+                    <img
+                        class="highlight-remove w-4 opacity-0"
+                        src="Images/visible.png"
+                        alt="Show password"
+                    />
+                </div>
+                <div
+                    class="flex w-full h-auto items-center justify-center gap-5"
+                >
+                    <input
+                        class="password-login w-full shadow-sm rounded-md hover:shadow-xl focus:shadow-xl p-2 text-sm focus:outline-none text-black"
+                        type="password"
+                        placeholder="Password"
+                    />
+                    <img
+                        class="highlight-remove pass-visibility w-4 cursor-pointer active:opacity-50"
+                        src="Images/visible.png"
+                        alt="Show password"
+                    />
+                </div>
+                <button
+                    class="highlight-remove bg-gradient-to-r from-gray-400 to-yellow-600 rounded-md px-2 py-1 hover:shadow-lg active:opacity-50 transition-all 1s ease-in"
+                >
+                    Login
+                </button>
+                <p class="text-black text-xs">
+                    No account yet?
+                    <span
+                        class="highlight-remove signup-link text-yellow-600 hover:underline cursor-pointer"
+                        >Sign up here!</span
+                    >
+                </p>
+                <button
+                    class="close-login-sec-btn bg-white hover:opacity-70 p-2 rounded-full absolute -top-5 -right-5"
+                >
+                    <img
+                        class="highlight-remove w-2"
+                        src="Images/close.png"
+                        alt="close"
+                    />
+                </button>
+            </div>
+            <!--SIGN UP PAGE-->
+            <div
+                class="signup-page hidden relative text-white h-auto w- p-5 bg-white bg-opacity-90 shadow flex-col gap-5 rounded-md lg:w-96 lg:py-14 lg:gap-10"
+            >
+                <div class="w-full flex items-center justify-center">
+                    <h1
+                        class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-yellow-600"
+                    >
+                        SIGN UP
+                    </h1>
+                </div>
+                <div
+                    class="flex w-full h-auto items-center justify-center gap-5"
+                >
+                    <input
+                        class="email-signup w-full shadow-sm rounded-md hover:shadow-xl focus:shadow-xl p-2 text-sm focus:outline-none text-black"
+                        type="email"
+                        placeholder="Email"
+                    />
+                    <img
+                        class="highlight-remove w-4 opacity-0"
+                        src="Images/visible.png"
+                        alt="Show password"
+                    />
+                </div>
+                <div
+                    class="flex w-full h-auto items-center justify-center gap-5"
+                >
+                    <input
+                        class="password-signup w-full shadow-sm rounded-md hover:shadow-xl focus:shadow-xl p-2 text-sm focus:outline-none text-black"
+                        type="password"
+                        placeholder="Password"
+                    />
+                    <img
+                        class="highlight-remove pass-signup-visibility w-4 cursor-pointer active:opacity-50"
+                        src="Images/visible.png"
+                        alt="Show password"
+                    />
+                </div>
+                <div
+                    class="flex w-full h-auto items-center justify-center gap-5"
+                >
+                    <input
+                        class="re-enter-password-signup w-full shadow-sm rounded-md hover:shadow-xl focus:shadow-xl p-2 text-sm focus:outline-none text-black"
+                        type="password"
+                        placeholder="Re-enter password"
+                    />
+                    <img
+                        class="highlight-remove re-enter-pass-signup-visibility w-4 cursor-pointer active:opacity-50"
+                        src="Images/visible.png"
+                        alt="Show password"
+                    />
+                </div>
+                <button
+                    class="highlight-remove bg-gradient-to-r from-gray-400 to-yellow-600 rounded-md px-2 py-1 hover:shadow-lg active:opacity-50 transition-all 1s ease-in"
+                >
+                    Create Account
+                </button>
+                <p class="text-black text-xs">
+                    Already have an account?
+                    <span
+                        class="highlight-remove login-link text-yellow-600 hover:underline cursor-pointer"
+                        >Login here!</span
+                    >
+                </p>
+                <button
+                    class="highlight-remove close-signup-sec-btn bg-white hover:opacity-70 p-2 rounded-full absolute -top-5 -right-5"
+                >
+                    <img class="w-2" src="Images/close.png" alt="close" />
+                </button>
+            </div>
+        </section>
+        <!--Header-->
+        <header
+            class="z-20 fixed top-0 left-0 right-0 upper-header w-full h-28 bg-blue-50 pt-2 flex flex-col justify-end shadow-lg"
+        >
+            <div class="w-full flex justify-center mb-5 lg:hidden">
+                <h1
+                    class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-yellow-600"
+                >
+                    GlamourGem Haven
+                </h1>
+            </div>
+            <div
+                class="content-header w-full h-7 items-center flex justify-between px-20 lg-2 mb-3"
+            >
+                <!--Header Title-->
+                <h1
+                    class="hidden lg:inline-block text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-yellow-600"
+                >
+                    GlamourGem Haven
+                </h1>
+                <!--Menu for large screen-->
+                <!--Header clickable texts components-->
+                <div
+                    class="clickable-text hidden lg:flex justify-between items-center w-1/2"
+                >
+                    <a
+                        href="shop-page.html"
+                        class="header-components hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-gray-400 hover:to-yellow-600 transition-all delay-75"
+                    >
+                        Shop
+                    </a>
+                    <a
+                        href="order.html"
+                        class="header-components hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-gray-400 hover:to-yellow-600 transition-all delay-75"
+                    >
+                        Order
+                    </a>
+                    <a
+                        href="about.html"
+                        class="header-components hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-gray-400 hover:to-yellow-600 transition-all delay-75"
+                    >
+                        About
+                    </a>
+                    <a
+                        href="contacts.html"
+                        class="header-components hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-gray-400 hover:to-yellow-600 transition-all delay-75"
+                    >
+                        Contacts
+                    </a>
+                </div>
+                <!--Header clickable icons components-->
+                <div
+                    class="clickable-icons flex justify-between items-center w-full lg:w-48"
+                >
+                    <img
+                        class="highlight-remove menu-btn w-4 header-components hover:opacity-50 lg:hidden"
+                        src="Images/menu.png"
+                        alt=""
+                    />
+                    <img
+                        class="highlight-remove w-4 lg:w-5 header-components hover:opacity-50 hidden lg:inline-block"
+                        src="Images/philippines.png"
+                        alt=""
+                    />
+                    <img
+                        class="highlight-remove login-btn w-4 lg:w-5 header-components hover:opacity-50 hidden lg:inline-block"
+                        src="Images/user.png"
+                        alt=""
+                    />
+                    <img
+                        class="highlight-remove search-btn w-4 lg:w-5 header-components hover:opacity-50"
+                        src=" Images/search.png"
+                        alt=""
+                    />
+                    <a href="wishlist.html">
+                        <div
+                            class="flex relative hover:opacity-50 cursor-pointer"
+                        >
+                            <img
+                                class="wishlist-btn w-4 lg:w-5 header-components hover:opacity-50"
+                                src="Images/heart.png"
+                                alt=""
+                            />
+                            <div
+                                class="bg-gray-500 w-6 h-6 absolute -top-4 -right-4 flex items-center justify-center rounded-full"
+                            >
+                                <p
+                                    class="wishlist-quantity font-bold text-yellow-400 text-md"
+                                >
+                                    0
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href=" cart.html">
+                        <div
+                            class="flex relative hover:opacity-50 cursor-pointer"
+                        >
+                            <img
+                                class="highlight-remove cart-btn w-4 lg:w-5 header-components hover:opacity-50"
+                                src="Images/shopping-cart.png"
+                                alt=""
+                            />
+                            <div
+                                class="bg-gray-500 w-6 h-6 absolute -top-4 -right-4 flex items-center justify-center rounded-full"
+                            >
+                                <p
+                                    class="cart-quantity-home font-bold text-yellow-400 text-md"
+                                >
+                                    0
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div
+                    class="search-bar hidden gap-2 items-center w-full lg:w-1/2"
+                >
+                    <input
+                        class="rounded-md p-1 w-full shadow-md"
+                        type="search"
+                        placeholder="Search"
+                    />
+                    <img
+                        class="search-bar-close w-3 cursor-pointer"
+                        src="Images/close.png"
+                        alt="close"
+                    />
+                </div>
+            </div>
+            <!--Lower texts deals-->
+            <div
+                class="transition-all lower-header w-full h-10 bg-gray-500 flex items-center justify-between px-2 lg:px-64 shadow-lg"
+            >
+                <div class="flex items-center">
+                    <img
+                        class="w-3 mr-1"
+                        src="Images/checked.png"
+                        alt="checked"
+                    />
+                    <p class="lower-header-text text-white">Up to 40% off</p>
+                </div>
+                <div class="flex items-center">
+                    <img
+                        class="w-3 mr-1"
+                        src="Images/checked.png"
+                        alt="checked"
+                    />
+                    <p class="lower-header-text text-white">Free Return</p>
+                </div>
+                <div class="flex items-center">
+                    <img
+                        class="w-3 mr-1"
+                        src="Images/checked.png"
+                        alt="checked"
+                    />
+                    <p class="lower-header-text text-white">1 month warranty</p>
+                </div>
+            </div>
+        </header>
+        <!--Main content/Body content-->
+        <main class="mt-28">
+            <!--First content Image-->
+            <div class="relative shadow-xl">
+                <img
+                    class="hover:brightness-75 transition-all ease-in-out delay-100"
+                    src="Images/model-1.webp"
+                    alt="Model 1"
+                />
+                <div
+                    class="absolute top-1/2 right-0 left-0 flex flex-col items-center justify-center gap-4"
+                >
+                    <p class="font-bold text-white text-lg lg:text-4xl">
+                        YOUR JEWELRY DESTINATION
+                    </p>
+                    <a href="shop-page.html">
+                        <button
+                            class="highlight-remove flex items-start text-white underline cursor-pointer text-sm lg:text-lg lg:hover:text-xl transition-all 0.3 ease-in-out animate-pulse hover:opacity-75 active:opacity-50"
+                        >
+                            CLICK HERE
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <!--Second content text-->
+            <div class="w-full h-44 flex flex-col items-center justify-center">
+                <h1 class="mb-5 font-bold text-xl">GlamourGem Haven</h1>
+                <p class="">Sculpting Elegance, One Gem at a Time.</p>
+            </div>
+
+            <!--Third content grid 3 images and 1 text -->
+            <div class="w-full grid grid-cols-1 lg:grid-cols-2">
+                <div class="relative">
+                    <img
+                        class="hover:cursor-pointer transition-all ease-in-out delay-100 brightness-90 hover:brightness-75"
+                        src="Images/model-2.webp"
+                        alt="Model-2"
+                    />
+                    <div
+                        class="absolute left-0 right-0 bottom-0 flex flex-col gap-1 pb-2 px-2"
+                    >
+                        <p class="font-bold text-white text-xl lg:text-2xl">
+                            MEN
+                        </p>
+                        <a href="shop-page.html">
+                            <button
+                                class="men-shop-btn highlight-remove hover:opacity-75 active:opacity-50 flex items-start text-white underline cursor-pointer text-sm lg:text-lg lg:hover:text-xl transition-all 0.3 ease-in-out animate-pulse"
+                            >
+                                CLICK HERE
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img
+                        class="h-full hover:cursor-pointer transition-all ease-in-out delay-100 brightness-90 hover:brightness-75"
+                        src="Images/women-model-3.jpg"
+                        alt="Women-model-2"
+                    />
+                    <div
+                        class="absolute left-0 right-0 bottom-0 flex flex-col gap-1 pb-2 px-2"
+                    >
+                        <p class="font-bold text-white text-xl lg:text-2xl">
+                            WOMEN
+                        </p>
+                        <a href="shop-page.html">
+                            <button
+                                class="women-shop-btn highlight-remove hover:opacity-75 active:opacity-50 flex items-start text-white underline cursor-pointer text-sm lg:text-lg lg:hover:text-xl transition-all 0.3 ease-in-out animate-pulse"
+                            >
+                                CLICK HERE
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img
+                        class="hover:cursor-pointer transition-all ease-in-out delay-100 brightness-90 hover:brightness-75"
+                        src="Images/home-page-photo.jpg"
+                        alt="rings"
+                    />
+                    <div
+                        class="absolute left-0 right-0 bottom-0 flex flex-col gap-1 pb-2 px-2"
+                    >
+                        <p class="font-bold text-white text-xl lg:text-2xl">
+                            Order
+                        </p>
+                        <a href="order.html">
+                            <button
+                                class="highlight-remove hover:opacity-75 active:opacity-50 flex items-start text-white underline cursor-pointer text-sm lg:text-lg lg:hover:text-xl transition-all 0.3 ease-in-out animate-pulse"
+                            >
+                                CLICK HERE
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col items-center lg:items-start p-10 pt-20"
+                >
+                    <p class="font-bold text-xl mb-5 animate-bounce">About</p>
+                    <p class="text-justify lg:text-justify">
+                        This website is a digital canvas, a manifestation of
+                        creativity, and a testament to my skills. It's not a
+                        real business, but rather a project born from a desire
+                        to learn, explore, and showcase what I can create.
+                        Welcome to my portfolio of possibilities, where pixels
+                        and code come together to tell a story of my journey in
+                        the digital realm.
+                    </p>
+                </div>
+            </div>
+        </main>
+        <!--Lower contents-->
+        <div
+            class="hidden lg:flex w-full h-80 shadow-inner bg-blue-50 justify-between pt-5 px-10"
+        >
+            <div class="flex flex-col gap-5">
+                <div class="border-b-2">
+                    <h1 class="font-bold">GlamourGem Haven</h1>
+                </div>
+                <a
+                    href="index.html"
+                    class="text-sm cursor-pointer hover:underline"
+                    >Home</a
+                >
+                <a
+                    href="shop-page.html"
+                    class="text-sm hover:underline cursor-pointer"
+                    >Shop</a
+                >
+                <a
+                    href="order.html"
+                    class="text-sm hover:underline cursor-pointer"
+                >
+                    Order
+                </a>
+                <a
+                    href="about.html"
+                    class="text-sm hover:underline cursor-pointer"
+                    >About</a
+                >
+                <a
+                    href="contacts.html"
+                    class="text-sm hover:underline cursor-pointer"
+                >
+                    Contact
+                </a>
+            </div>
+            <div class="flex flex-col gap-5">
+                <div class="border-b-2">
+                    <h1 class="font-bold">Costumer Service</h1>
+                </div>
+                <a
+                    href="FAQ.html"
+                    class="text-sm hover:underline cursor-pointer"
+                    >FAQ</a
+                >
+                <p class="text-xs hover:underline cursor-pointer">
+                    Shipping & Delivery
+                </p>
+                <p class="text-xs hover:underline cursor-pointer">
+                    Payment Methods
+                </p>
+                <p class="text-xs hover:underline cursor-pointer">
+                    Return Warranty
+                </p>
+            </div>
+            <div class="flex flex-col gap-5">
+                <div class="border-b-2">
+                    <h1 class="font-bold">Contacts</h1>
+                </div>
+                <a
+                    href="contacts.html"
+                    class="text-sm hover:underline cursor-pointer"
+                >
+                    fulachechristianneil@gmail.com
+                </a>
+                <a
+                    href="contacts.html"
+                    class="text-sm hover:underline cursor-pointer"
+                >
+                    +63 9469013832
+                </a>
+            </div>
+            <div class="flex flex-col gap-5"></div>
+        </div>
+
+        <div class="w-full flex flex-col items-center p-10 pt-3 lg:hidden">
+            <div class="main-menu w-full flex flex-col px-5 shadow p-1">
+                <div class="flex items-center justify-between w-full">
+                    <h1 class="font-bold">GlamourGem Haven</h1>
+                    <img
+                        class="highlight-remove main-menu-btn cursor-pointer"
+                        src="Images/down-arrow.png"
+                        alt="down arrow"
+                    />
+                </div>
+                <div
+                    class="main-menu-list w-full hidden flex-col items-start justify-center pt-5 pb-5 gap-2"
+                >
+                    <a
+                        href="index.html"
+                        class="text-sm cursor-pointer hover:underline"
+                        >Home</a
+                    >
+                    <a
+                        href="shop-page.html"
+                        class="text-sm hover:underline cursor-pointer"
+                        >Shop</a
+                    >
+                    <a
+                        href="order.html"
+                        class="text-sm hover:underline cursor-pointer"
+                    >
+                        Order
+                    </a>
+                    <a
+                        href="about.html"
+                        class="text-sm hover:underline cursor-pointer"
+                        >About</a
+                    >
+                    <a
+                        href="contacts.html"
+                        class="text-sm hover:underline cursor-pointer"
+                    >
+                        Contact
+                    </a>
+                </div>
+            </div>
+            <div
+                class="customer-service-menu w-full flex flex-col px-5 shadow p-1"
+            >
+                <div class="flex items-center justify-between w-full">
+                    <h1 class="font-bold">Customer Service</h1>
+                    <img
+                        class="highlight-remove customer-service-btn cursor-pointer"
+                        src="Images/down-arrow.png"
+                        alt="down arrow"
+                    />
+                </div>
+                <div
+                    class="customer-service-list w-full hidden flex-col items-start justify-center pt-5 pb-5 gap-2"
+                >
+                    <a
+                        href="FAQ.html"
+                        class="text-sm hover:underline cursor-pointer"
+                        >FAQ</a
+                    >
+                    <p class="text-sm hover:underline cursor-pointer">
+                        Shipping & Delivery
+                    </p>
+                    <p class="text-sm hover:underline cursor-pointer">
+                        Payment Methods
+                    </p>
+                    <p class="text-sm hover:underline cursor-pointer">
+                        Return Warranty
+                    </p>
+                </div>
+            </div>
+            <div class="contacts-menu w-full flex flex-col px-5 shadow p-1">
+                <div class="flex items-center justify-between w-full">
+                    <h1 class="font-bold">Contacts</h1>
+                    <img
+                        class="highlight-remove contacts-btn cursor-pointer"
+                        src="Images/down-arrow.png"
+                        alt="down arrow"
+                    />
+                </div>
+                <div
+                    class="contacts-list w-full hidden flex-col items-start justify-center pt-5 pb-5 gap-2"
+                >
+                    <a
+                        href="contacts.html"
+                        class="text-sm hover:underline cursor-pointer"
+                    >
+                        fulachechristianneil@gmail.com
+                    </a>
+                    <a
+                        href="contacts.html"
+                        class="text-sm hover:underline cursor-pointer"
+                    >
+                        +63 9469013832
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--Last content-->
+        <div
+            class="w-full flex items-center justify-between pt-2 px-5 bg-black h-20"
+        >
+            <div class="flex gap-2 text-white" style="font-size: 0.5rem">
+                <p class="lg:text-sm">Copyright © 2023</p>
+                <p class="lg:text-sm">All rights reserved.</p>
+            </div>
+            <div class="flex gap-2 text-white" style="font-size: 0.5rem">
+                <a href="https://www.facebook.com/neilfulache"><img src="Images/facebook.png" alt="" /></a>
+                <a href="https://www.instagram.com/neil_pak0/"><img src="Images/instagram.png" alt="" /></a>
+                <a href=""><img src="Images/linkedin.png" alt="" /></a>
+            </div>
+        </div>
+        <script src="Scripts/header-script.js"></script>
+        <script src="Scripts/small-menu-script.js"></script>
+        <script src="Scripts/login-script.js"></script>
+        <script src="Scripts/home-page-script.js"></script>
+    </body>
+</html>
